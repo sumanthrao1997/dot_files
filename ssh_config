@@ -1,0 +1,34 @@
+# Personal account, - the default config
+Host github.com
+   HostName github.com
+   #generate ssh key with ssh-keygen and give your private key here,  upload your public key to github
+   IdentityFile ~/.ssh/id_rsa
+   
+# cpp account
+Host gitlab.com
+  HostName gitlab.com
+  #generate ssh key with ssh-keygen and give your private key here, upload your public key to gitlab
+  IdentityFile ~/.ssh/id_ed
+ 
+ 
+#ssh tunneling to login to a server with firewall 
+# server login  
+ServerAliveInterval 120
+ServerAliveCountMax 15
+
+#getting inside the firewal
+Host personal-server-web
+  HostName www.personal-server.com
+  User snagulavancha
+  Port 22
+  ForwardX11 yes
+  Compression yes
+
+Host server_name
+    HostName 191.0.0.0
+    User snagulavancha
+    Port 22
+    ProxyJump personal-server-web
+    Compression yes
+    ForwardX11 yes
+    LocalForward 2002 localhost:2002
