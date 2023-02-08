@@ -1,7 +1,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => The most relevant keybindigs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <silent><C-s>     :w<cr>
+map <silent><C-s>     :w<cr>
+map! <silent><C-s>     <ESC>:w<cr>
 nmap <silent><leader>w :w<cr>
 nmap <silent><leader>x :x<cr>
 nmap <silent><leader>q :q!<cr>
