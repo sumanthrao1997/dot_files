@@ -14,5 +14,5 @@ luafile ~/.vim/config/plug.lua
 
 
 " TODO: 
-" look into search global and local and better toggling effect
-" how to toogle into functions, previous, forward, backward and open in new tab
+" glaobal search and go there, and find and repplace kind of implementaiton
+" map ctrl-o to something meaningful to go back

@@ -39,8 +39,8 @@
   "explorer.openAction.strategy": "sourceWindow",
   "explorer.keyMappings.global": {
     "<cr>": ["wait","expandable?",["expanded?", "collapse", "expand"],"open"],
-    "s": "open:vsplit",
-    "E": "open:split",
+    "v": "open:vsplit",
+    "s": "open:split",
     "t": "open:tab",
     "n": "addFile",
     "N": "addDirectory"
