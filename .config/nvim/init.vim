@@ -13,7 +13,6 @@ luafile ~/.vim/config/plug.lua
 " In your init.lua or init.vim
 
 
-" TODO: Fix explorer to open things to side, 
-" toggle buffers, fix the buffer line at bottom but last thing to look into
+" TODO: 
 " look into search global and local and better toggling effect
 " how to toogle into functions, previous, forward, backward and open in new tab
