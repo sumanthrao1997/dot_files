@@ -38,10 +38,16 @@ inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+" Add custom commands
+command! -nargs=0 Format    :call CocActionAsync('format')
+command! -nargs=0 OR        :call CocAction('runCommand', 'editor.action.organizeImport')
+command! -nargs=0 CocToggle :call CocAction('diagnosticToggle')
+
 function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
 
 " Keystrokes mappings
 nmap <silent><M-o> :CocCommand clangd.switchSourceHeader<cr>
@@ -53,3 +59,7 @@ nmap <silent>g[ <Plug>(coc-diagnostic-prev)
 nmap <leader>g] <Plug>(coc-diagnostic-next)
 nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>cf <Plug>(coc-fix-current)
+
+
+nmap <silent> gs :call CocAction('jumpDefinition', 'vsplit')<CR>
+nmap <silent> gt :call CocAction('jumpDefinition', 'tabe')<CR>
