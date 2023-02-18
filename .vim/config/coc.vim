@@ -58,7 +58,7 @@ nmap <silent>gr <Plug>(coc-references)
 nmap <silent>g[ <Plug>(coc-diagnostic-prev)
 nmap <leader>g] <Plug>(coc-diagnostic-next)
 nmap <leader>rn <Plug>(coc-rename)
-nmap <leader>cf <Plug>(coc-fix-current)
+nmap <leader>qf <Plug>(coc-fix-current)
 
 
 nmap <silent> gs :call CocAction('jumpDefinition', 'vsplit')<CR>

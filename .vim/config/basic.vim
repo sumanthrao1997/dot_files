@@ -75,3 +75,12 @@ set softtabstop=-1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set exrc
 set secure
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Defining Folds
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set foldmethod=indent
+set nofoldenable
+set foldlevel=99
+set fillchars=fold:\ "The backslash escapes a space
+set foldtext=CustomFoldText()

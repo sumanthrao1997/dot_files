@@ -6,13 +6,7 @@ source ~/.vim/config/keybindings.vim
 source ~/.vim/config/plugins_config.vim
 source ~/.vim/config/plugins_keys.vim
 source ~/.vim/config/extended.vim
-
-" New LUA configuration, WIP
-"luafile ./bufferline.lua
 luafile ~/.vim/config/plug.lua
-" In your init.lua or init.vim
 
-
-" TODO: 
-" glaobal search and go there, and find and repplace kind of implementaiton
-" map ctrl-o to something meaningful to go back
+" TODO:
+" Check the silver searcher behaviour, some times dosen't show what is required

@@ -19,8 +19,14 @@ map <silent><expr> <leader><cr> (&hls && v:hlsearch ? ':set nohlsearch' : ':set 
 " Quickly open vim config file
 "map <silent><leader>e :e! $MYVIMRC<cr>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => SilverSearcher bindings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <silent><leader>s :Ag <c-r><c-w><cr>
+
+
 " Jumb back to last buffer
-"map <silent><leader>6 <c-^><cr>
+map <silent><leader>6 <c-^><cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Shortcutting split navigation, saving a keypress:
@@ -50,7 +56,7 @@ nmap <silent><C-Down>  :resize -3<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"vmap <silent><leader>r :call VisualSelection('replace', '')<cr>
+vmap <silent><leader>r :call VisualSelection('replace', '')<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Function Calls
