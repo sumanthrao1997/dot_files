@@ -10,6 +10,7 @@ alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=sta
 alias docu='cd ~/Documents'
 alias esc_caps='sh ~/scripts/esc_to_capslock.sh'
 alias gcl='git clone'
+alias gcd='git clone --depth 1'
 alias gco='git checkout'
 alias gdown='gsutil -m cp'
 alias git_pull_all='find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;'

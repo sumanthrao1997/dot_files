@@ -19,3 +19,5 @@ source $HOME/.aliases.zsh
 source $HOME/.zshrc_local
 source $HOME/.functions.zsh
 
+
+eval $(thefuck --alias)
