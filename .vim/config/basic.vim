@@ -45,7 +45,8 @@ let g:coc_disable_startup_warning = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 syntax enable
-colorscheme xcodedark
+let g:xcodedarkhc_green_comments = 1
+colorscheme xcodedarkhc
 " colorscheme xcodelight
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
