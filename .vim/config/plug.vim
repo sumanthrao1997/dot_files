@@ -23,6 +23,8 @@ Plug 'preservim/nerdcommenter'
 Plug 'sbdchd/neoformat'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 Plug 'tpope/vim-surround'
 call plug#end()
 

@@ -1,27 +1,31 @@
 {
   "coc.source.file.ignoreHidden": false,
-  "coc.source.around.enable": false,
+  "coc.source.around.enable" :true,
   "coc.source.buffer.enable": false,
+  "signature.enable": true,
   "coc.source.word.filetypes": ["markdown", "latex"],
   "inlayHint.enable": false,
   "diagnostic.enable": true,
   "clangd.compilationDatabaseCandidates": [
     "${workspaceFolder}",
     "${workspaceFolder}/build/",
-    "${workspaceFolder}/_skbuild/linux-x86_64-3.10/cmake-build/"
+    "${workspaceFolder}/build/kiss_icp",
+    "${workspaceFolder}/build/direct_lidar_odometry",
+    "${workspaceFolder}/build/faster_lio",
+    //"${workspaceFolder}/_skbuild/linux-x86_64-3.10/cmake-build/"
   ],
   "clangd.arguments": [
     "--background-index",
     "--clang-tidy",
     "--header-insertion=iwyu",
-    "-j=8"
+    "-j=12"
   ],
   "python.pythonPath": "python3",
   "python.linting.pylintEnabled": true,
   "python.linting.pylintArgs": ["--extension-pkg-whitelist=pyopenvdb"],
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "~/.local/bin/black",
-  //"coc.preferences.formatOnSaveFiletypes": ["python"],
+  "coc.preferences.formatOnSaveFiletypes": ["cpp"],
   "explorer.root.strategies": ["workspace","cwd", "reveal", "sourceBuffer"],
   "explorer.buffer.root.template": "[icon & 1] OPEN EDITORS",
   "explorer.file.root.template": "[icon & 1] PROJECT ([root])",
@@ -49,5 +53,6 @@
   "markdownlint.config": {
     "default": true,
     "line_length": false
-  }
+  },
+  //"clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.6/clangd_15.0.6/bin/clangd"
 }
