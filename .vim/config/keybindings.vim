@@ -7,7 +7,7 @@ nmap <silent><leader>w :w<cr>
 nmap <silent><leader>x :x<cr>
 nmap <silent><leader>q :q!<cr>
 " use e to move to end of line
-noremap e $
+"noremap e $
 
 " Copy paste: leader+c / leader+v
 map <silent><C-c> "+y
@@ -19,10 +19,7 @@ map <silent><expr> <leader><cr> (&hls && v:hlsearch ? ':set nohlsearch' : ':set 
 " Quickly open vim config file
 "map <silent><leader>e :e! $MYVIMRC<cr>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => SilverSearcher bindings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <silent><leader>s :Ag <c-r><c-w><cr>
+"nmap <silent><leader>s :Ag <c-r><c-w><cr>
 
 
 " Jumb back to last buffer
@@ -31,12 +28,20 @@ map <silent><leader>6 <c-^><cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Shortcutting split navigation, saving a keypress:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap split navigations to just CTRL +hjkl
+" Remap buffer just ALT +hl or arrows
+map <silent><M-Left> <M-h>
+map <silent><M-Right> <M-l>
+
+" Remap split navigations to just CTRL +hjkl or arrows
 map <silent><C-h> <C-w>h
 map <silent><C-j> <C-w>j
 map <silent><C-k> <C-w>k
 map <silent><C-l> <C-w>l
 
+map <silent><C-Left> <C-w>h
+map <silent><C-Down> <C-w>j
+map <silent><C-Up> <C-w>k
+map <silent><C-Right> <C-w>l
 " Same but using the leader, you can't hold down this key, what a shame
 nmap <silent><leader>h :wincmd h<cr>
 nmap <silent><leader>j :wincmd j<cr>
@@ -44,10 +49,10 @@ nmap <silent><leader>k :wincmd k<cr>
 nmap <silent><leader>l :wincmd l<cr>
 
 " Split configurations
-nmap <silent><M-Left>  :vertical resize +3<cr>
-nmap <silent><M-Right> :vertical resize -3<cr>
-nmap <silent><M-Up>    :resize +3<cr>
-nmap <silent><M-Down>  :resize -3<cr>
+nmap <silent><C-h>  :vertical resize +3<cr>
+nmap <silent><C-l> :vertical resize -3<cr>
+nmap <silent><C-k>    :resize +3<cr>
+nmap <silent><C-j>  :resize -3<cr>
 
 " Always move down with vim keys even in soft-lines
 "noremap <expr> j v:count ? 'j' : 'gj'
