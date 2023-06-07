@@ -18,6 +18,10 @@ require'bufferline'.setup{
 local actions = require("telescope.actions")
 require("telescope").setup({
 	defaults = {
+		history = {
+      path = '~/.local/share/nvim/telescope_history',
+      limit = 100,
+    },
 		mappings = {
 			i = {
 				["<esc>"] = actions.close,
