@@ -11,7 +11,19 @@ require'bufferline'.setup{
     right_trunc_marker = '',
     offsets = {{filetype = "NvimTree", text = "EXPLORER", text_align = "center"}},
     show_tab_indicators = true,
-    show_close_icon = false
+    show_close_icon = false,
+		diagnostics = "coc",
+		diagnostics_indicator =
+		function(count, level, diagnostics_dict, context)
+			local s = " "
+			if context.buffer:current() then
+				for e, n in pairs(diagnostics_dict) do
+					local sym = e == "error" and " " or (e == "warning" and " " or "" )
+					s = s .. n .. sym
+				end
+			end
+			return s
+		end
 	},
 }
 

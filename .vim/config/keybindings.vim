@@ -49,10 +49,10 @@ nmap <silent><leader>k :wincmd k<cr>
 nmap <silent><leader>l :wincmd l<cr>
 
 " Split configurations
-nmap <silent><C-h>  :vertical resize +3<cr>
-nmap <silent><C-l> :vertical resize -3<cr>
-nmap <silent><C-k>    :resize +3<cr>
-nmap <silent><C-j>  :resize -3<cr>
+nmap <silent><M-C-Left>  :vertical resize +3<cr>
+nmap <silent><M-C-Right> :vertical resize -3<cr>
+nmap <silent><M-C-Up>    :resize +3<cr>
+nmap <silent><M-C-Down>  :resize -3<cr>
 
 " Always move down with vim keys even in soft-lines
 "noremap <expr> j v:count ? 'j' : 'gj'
