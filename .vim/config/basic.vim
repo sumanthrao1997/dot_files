@@ -11,7 +11,6 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
 set backspace=eol,start,indent
-"set clipboard^=unnamed
 set clipboard+=unnamedplus
 set cmdheight=1
 set colorcolumn=+1
@@ -32,6 +31,7 @@ set splitright
 set termguicolors
 set textwidth=100
 set whichwrap+=<,>,h,l
+let g:netrw_fastbrowse = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => coc.nvim settings
@@ -52,7 +52,6 @@ colorscheme xcodedarkhc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
 set nowb
 set noswapfile
