@@ -7,6 +7,3 @@ source ~/.vim/config/plugins_config.vim
 source ~/.vim/config/plugins_keys.vim
 source ~/.vim/config/extended.vim
 luafile ~/.vim/config/plug.lua
-
-" TODO:
-" Check the silver searcher behaviour, some times dosen't show what is required
