@@ -6,8 +6,6 @@ map! <silent><C-s>     <ESC>:w<cr>
 nmap <silent><leader>w :w<cr>
 nmap <silent><leader>x :x<cr>
 nmap <silent><leader>q :q!<cr>
-" use e to move to end of line
-"noremap e $
 
 " Copy paste: leader+c / leader+v
 map <silent><C-c> "+y
@@ -17,10 +15,7 @@ map <silent><C-p> "+p
 map <silent><expr> <leader><cr> (&hls && v:hlsearch ? ':set nohlsearch' : ':set hls')."\n"
 
 " Quickly open vim config file
-"map <silent><leader>e :e! $MYVIMRC<cr>
-
-"nmap <silent><leader>s :Ag <c-r><c-w><cr>
-
+map <silent><leader>e :e! $MYVIMRC<cr>
 
 " Jumb back to last buffer
 map <silent><leader>6 <c-^><cr>
@@ -38,9 +33,9 @@ map <silent><C-j> <C-w>j
 map <silent><C-k> <C-w>k
 map <silent><C-l> <C-w>l
 
-map <silent><C-Left> <C-w>h
-map <silent><C-Down> <C-w>j
-map <silent><C-Up> <C-w>k
+map <silent><C-Left>  <C-w>h
+map <silent><C-Down>  <C-w>j
+map <silent><C-Up>    <C-w>k
 map <silent><C-Right> <C-w>l
 " Same but using the leader, you can't hold down this key, what a shame
 nmap <silent><leader>h :wincmd h<cr>
@@ -49,10 +44,10 @@ nmap <silent><leader>k :wincmd k<cr>
 nmap <silent><leader>l :wincmd l<cr>
 
 " Split configurations
-nmap <silent><M-C-Left>  :vertical resize +3<cr>
-nmap <silent><M-C-Right> :vertical resize -3<cr>
-nmap <silent><M-C-Up>    :resize +3<cr>
-nmap <silent><M-C-Down>  :resize -3<cr>
+nmap <silent><M-=>  :vertical resize +3<cr>
+nmap <silent><M-->  :vertical resize -3<cr>
+nmap <silent><M-+>  :resize +3<cr>
+nmap <silent><M-_>  :resize -3<cr>
 
 " Always move down with vim keys even in soft-lines
 "noremap <expr> j v:count ? 'j' : 'gj'
