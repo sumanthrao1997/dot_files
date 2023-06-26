@@ -25,6 +25,7 @@ xmap <silent>gc <Plug>NERDCommenterToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap ff      <cmd>Telescope find_files<cr>
 nnoremap fs      <cmd>Telescope live_grep<cr>
+nnoremap fh      <cmd>Telescope help_tags<cr>
 "nnoremap <silent><leader>Ag <cmd>Telescope live_grep<cr>
  
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
