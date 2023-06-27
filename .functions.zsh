@@ -69,10 +69,9 @@ zip_folder() {
     zip -r $folder.zip $folder
 }
 
-compile_evitado_vscode() {
-    rm ~/evitado_ws/src/evitado/compile_commands.json
+compile_commands() {
     printf '[' > compile_commands.json
-    find ~/evitado_ws/build_release -type f -name 'compile_commands.json' -exec sh -c "cat {} | tail -n+2 | head -n-1 && printf ','" >> compile_commands.json \;
+    find  "$1" -type f -name 'compile_commands.json' -exec sh -c "cat {} | tail -n+2 | head -n-1 && printf ','" >> compile_commands.json \;
     sed -i '$s/.$//' compile_commands.json
     printf '\n]\n' >> compile_commands.json
 }
