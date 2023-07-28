@@ -10,8 +10,9 @@
     "${workspaceFolder}",
     "${workspaceFolder}/build/",
     "${workspaceFolder}/build/kiss_icp",
-    "${workspaceFolder}/build/direct_lidar_odometry",
-    "${workspaceFolder}/build/faster_lio",
+    "${workspaceFolder}/build_release",
+    //"${workspaceFolder}/build/direct_lidar_odometry",
+    //"${workspaceFolder}/build/faster_lio",
     //"${workspaceFolder}/_skbuild/linux-x86_64-3.10/cmake-build/"
   ],
   "clangd.arguments": [
@@ -25,7 +26,7 @@
   "python.linting.pylintArgs": ["--extension-pkg-whitelist=pyopenvdb"],
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "~/.local/bin/black",
-  "coc.preferences.formatOnSaveFiletypes": ["cpp", "lua"],
+  "coc.preferences.formatOnSaveFiletypes": ["lua"],
   "explorer.root.strategies": ["workspace","cwd", "reveal", "sourceBuffer"],
   "explorer.buffer.root.template": "[icon & 1] OPEN EDITORS",
   "explorer.file.root.template": "[icon & 1] PROJECT ([root])",
