@@ -81,3 +81,11 @@ mpc(){
 	cd -P -- "$1"
 }
 
+bk(){
+    s= 
+    for i in {1..$1}
+    do 
+        s="$s../"
+    done
+    cd $s
+}
