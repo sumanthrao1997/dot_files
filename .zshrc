@@ -16,7 +16,8 @@ plugins=(git
         z
         colored-man-pages
         command-not-found
-        zsh-autosuggestions)
+        zsh-autosuggestions
+        extract)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases.zsh
