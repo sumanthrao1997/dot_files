@@ -89,3 +89,9 @@ bk(){
     done
     cd $s
 }
+png_to_pdf () {
+    IMAGE="$1"
+    BASENAME="$(basename -- $IMAGE)"
+    FILENAME=${BASENAME%.*}
+    convert $IMAGE ${FILENAME}.pdf
+}
