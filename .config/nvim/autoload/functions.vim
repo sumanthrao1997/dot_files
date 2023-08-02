@@ -6,6 +6,9 @@ function! InsertIpdbLine()
   execute "normal o".trace
 endfunction
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Helper Functions
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! CmdLine(str)
     call feedkeys(":" . a:str)
 endfunction
@@ -28,6 +31,9 @@ function! VisualSelection(direction, extra_filter) range
 endfunction
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Custom folds
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! CustomFoldText()
   let indentation = indent(v:foldstart - 1)
   let foldSize = 1 + v:foldend - v:foldstart
