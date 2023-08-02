@@ -8,12 +8,10 @@
   "diagnostic.enable": true,
   "clangd.compilationDatabaseCandidates": [
     "${workspaceFolder}",
-    "${workspaceFolder}/build/",
-    "${workspaceFolder}/build/kiss_icp",
-    "${workspaceFolder}/build_release",
-    //"${workspaceFolder}/build/direct_lidar_odometry",
+    "${workspaceFolder}/build/"
+    // // "${workspaceFolder}/build/kiss_icp",
+    // "${workspaceFolder}/build_release"
     //"${workspaceFolder}/build/faster_lio",
-    //"${workspaceFolder}/_skbuild/linux-x86_64-3.10/cmake-build/"
   ],
   "clangd.arguments": [
     "--background-index",

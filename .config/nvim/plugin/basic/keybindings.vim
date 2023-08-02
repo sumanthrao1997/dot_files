@@ -7,6 +7,10 @@ nmap <silent><leader>w :w<cr>
 nmap <silent><leader>x :x<cr>
 nmap <silent><leader>q :q!<cr>
 
+" j+k or k+j escapes insert mode
+imap jk <ESC>
+imap kj <ESC>
+
 " Copy paste: leader+c / leader+v
 map <silent><C-c> "+y
 map <silent><C-p> "+p
@@ -78,3 +82,4 @@ nnoremap * *zz
 nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
+
