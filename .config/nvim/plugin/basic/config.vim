@@ -9,6 +9,7 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set relativenumber
 set number
 set backspace=eol,start,indent
 set clipboard+=unnamedplus
@@ -55,7 +56,7 @@ colorscheme xcodedarkhc
 set nobackup
 set nowb
 set noswapfile
-set undodir=~/.vim/temp_dirs/undodir/
+" set undodir=~/.vim/temp_dirs/undodir/
 set undofile
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

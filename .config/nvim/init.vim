@@ -17,4 +17,5 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'folke/zen-mode.nvim'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 call plug#end()
