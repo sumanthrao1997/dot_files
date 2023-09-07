@@ -1,7 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Inster Python debugger inline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! InsertIpdbLine()
+function! functions#InsertIpdbLine()
   let trace = expand("import ipdb; ipdb.set_trace()")
   execute "normal o".trace
 endfunction
@@ -9,11 +9,11 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! CmdLine(str)
+function! functions#CmdLine(str)
     call feedkeys(":" . a:str)
 endfunction
 
-function! VisualSelection(direction, extra_filter) range
+function! functions#VisualSelection(direction, extra_filter) range
     let l:saved_reg = @"
     execute "normal! vgvy"
 
@@ -21,9 +21,11 @@ function! VisualSelection(direction, extra_filter) range
     let l:pattern = substitute(l:pattern, "\n$", "", "")
 
     if a:direction == 'gv'
-        call CmdLine("Ack '" . l:pattern . "' " )
+        call functions#CmdLine("Ack '" . l:pattern . "' " )
     elseif a:direction == 'replace'
-        call CmdLine("%s" . '/'. l:pattern . '/')
+        call functions#CmdLine("%s" . '/'. l:pattern . '/')
+    elseif a:direction == 'replace_confirm'
+        call functions#CmdLine("%s" . '/'. l:pattern . '/'.'/gc')
     endif
 
     let @/ = l:pattern

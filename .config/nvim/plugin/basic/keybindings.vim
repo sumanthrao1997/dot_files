@@ -54,18 +54,19 @@ map <silent><M-+>  :resize +3<cr>
 map <silent><M-_>  :resize -3<cr>
 
 " Always move down with vim keys even in soft-lines
-"noremap <expr> j v:count ? 'j' : 'gj'
-"noremap <expr> k v:count ? 'k' : 'gk'
+noremap <expr> j v:count ? 'j' : 'gj'
+noremap <expr> k v:count ? 'k' : 'gk'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-vmap <silent><leader>r :call VisualSelection('replace', '')<cr>
+vmap <silent><leader>r :call functions#VisualSelection('replace', '')<cr>
+vmap <silent><leader>c :call functions#VisualSelection('replace_confirm', '')<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Function Calls
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <Leader>ipdb :call InsertIpdbLine()<cr>
+map <Leader>ipdb :call functions#InsertIpdbLine()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colorscheme, TOOD: define a darktheme and a light theme
