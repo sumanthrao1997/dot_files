@@ -19,6 +19,9 @@ nnoremap ff      <cmd>Telescope find_files<cr>
 nnoremap fs      <cmd>Telescope live_grep<cr>
 nnoremap fh      <cmd>Telescope help_tags<cr>
 nnoremap f*      <cmd>Telescope grep_string<cr>
+nnoremap f8      <cmd>Telescope grep_string<cr>
+nnoremap fr      <cmd>Telescope search_history<cr>
+nnoremap fg      <cmd>Telescope git_commits<cr>
 "nnoremap <silent><leader>Ag <cmd>Telescope live_grep<cr>
  
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
