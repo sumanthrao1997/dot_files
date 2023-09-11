@@ -1,4 +1,5 @@
 alias catalias='cat ~/.aliases.zsh'
+alias cat='bat'
 alias cc='clear'
 alias coex='code . && exit'
 alias copywd='pwd | tr "\n" "\b" | xclip -selection clipboard'
