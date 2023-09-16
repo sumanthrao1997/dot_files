@@ -13,7 +13,7 @@ imap kj <ESC>
 
 " Copy paste: leader+c / leader+v
 map <silent><C-c> "+y
-map <silent><C-p> "+p
+map <silent><C-p> "0p
 
 " Toggle highlight when <leader><cr> is pressed
 map <silent><expr> <leader><cr> (&hls && v:hlsearch ? ':set nohlsearch' : ':set hls')."\n"
@@ -28,8 +28,8 @@ map <silent><leader>6 <c-^><cr>
 " => Shortcutting split navigation, saving a keypress:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap buffer just ALT +hl or arrows
-map <silent><M-Left> <M-h>
-map <silent><M-Right> <M-l>
+" map <silent><M-Left> <M-h>
+" map <silent><M-Right> <M-l>
 
 " Remap split navigations to just CTRL +hjkl or arrows
 map <silent><C-h> <C-w>h
@@ -37,10 +37,6 @@ map <silent><C-j> <C-w>j
 map <silent><C-k> <C-w>k
 map <silent><C-l> <C-w>l
 
-map <silent><C-Left>  <C-w>h
-map <silent><C-Down>  <C-w>j
-map <silent><C-Up>    <C-w>k
-map <silent><C-Right> <C-w>l
 " Same but using the leader, you can't hold down this key, what a shame
 nmap <silent><leader>h :wincmd h<cr>
 nmap <silent><leader>j :wincmd j<cr>
@@ -48,10 +44,10 @@ nmap <silent><leader>k :wincmd k<cr>
 nmap <silent><leader>l :wincmd l<cr>
 
 " Split configurations
-map <silent><M-=>  :vertical resize +2<cr>
-map <silent><M-->  :vertical resize -2<cr>
-map <silent><M-+>  :resize +3<cr>
-map <silent><M-_>  :resize -3<cr>
+map <silent><C-Left>   :vertical resize +2<cr>
+map <silent><C-Down>   :vertical resize -2<cr>
+map <silent><C-Up>     :resize +3<cr>
+map <silent><C-Right>  :resize -3<cr>
 
 " Always move down with vim keys even in soft-lines
 noremap <expr> j v:count ? 'j' : 'gj'
@@ -83,4 +79,3 @@ nnoremap * *zz
 nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
-
