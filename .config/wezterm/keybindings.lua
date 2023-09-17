@@ -2,20 +2,6 @@ local wezterm = require 'wezterm'
 local utils = require 'utils'
 local keybindings = {}
 
-function keybindings.open_dir_in_new_tab(dir)
-  local act = wezterm.action
-  local action = act.SpawnCommandInNewTab {
-    cwd = dir,
-    set_environment_variables = {
-      TERM = 'screen-256color',
-    },
-    args = {
-      'nvim',
-      dir,
-    },
-  }
-  return action
-end
 
 function keybindings.apply_to_config(config)
   local act = wezterm.action
@@ -49,19 +35,19 @@ function keybindings.apply_to_config(config)
       -- to open config in tab
       key = 'F2',
       mods = 'CTRL|SHIFT',
-      action = utils.open_dir_in_new_tab(os.getenv('WEZTERM_CONFIG_DIR'))
+      action = utils.open_path_in_new_tab(wezterm.config_file)
     },
     {
       -- to open vim config in new tab
       key = 'F1',
       mods = 'CTRL|SHIFT',
-      action = utils.open_dir_in_new_tab('~/.config/nvim')
+      action = utils.open_path_in_new_tab('~/.config/nvim/')
     },
     {
       -- to open config in tab
       key = 'F3',
       mods = 'CTRL|SHIFT',
-      action = utils.open_dir_in_new_tab(os.getenv('HOME') .. '/.zshrc')
+      action = utils.open_path_in_new_tab(os.getenv('HOME') .. '/.zshrc')
     },
   }
 
