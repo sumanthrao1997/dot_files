@@ -20,13 +20,18 @@ config.leader = { key = 'w', mods = 'CTRL', timeout_milliseconds = 1000 }
 keybindings.apply_to_config(config)
 tab_bar.apply_to_config(config)
 
-
+--font size
+config.font_size = 16.0
+-- config.font_size = 22.0
 
 -- color scheme
-config.color_scheme = 'Batman'
+-- local scheme = wezterm.get_builtin_color_schemes()['Abernathy']
+-- scheme.background = 'black'
+-- config.color_scheme = 'Abernathy'
+-- wezterm.color.load_scheme("wezterm/theme.toml")
+config.color_scheme = "Abernathy_black"
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
-config.font_size = 16.0
 config.audible_bell = "Disabled"
 -- config.font_size = 16.0
 config.tab_max_width = 30

@@ -1,6 +1,10 @@
 local wezterm = require 'wezterm'
 local utils = {}
 
+function utils.get_font()
+
+end
+
 function utils.open_dir_in_new_tab(dir)
   local act = wezterm.action
   local action = act.SpawnCommandInNewTab {
