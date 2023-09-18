@@ -21,6 +21,12 @@ function keybindings.apply_to_config(config)
       mods = 'CTRL|SHIFT',
       action = act.ClearScrollback 'ScrollbackAndViewport',
     },
+    {
+      key = 'x',
+      mods = 'LEADER',
+      action = wezterm.action.CloseCurrentPane { confirm = false },
+    },
+
     -- resize mode with r
     {
       key = 'r',
