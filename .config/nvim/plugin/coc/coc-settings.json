@@ -8,8 +8,9 @@
   "diagnostic.enable": true,
   "clangd.compilationDatabaseCandidates": [
     "${workspaceFolder}",
-    "${workspaceFolder}/build/"
-    // // "${workspaceFolder}/build/kiss_icp",
+    "${workspaceFolder}/build/",
+    // "${workspaceFolder}/build/*/",
+    "${workspaceFolder}/python/build/.*/",
     // "${workspaceFolder}/build_release"
     //"${workspaceFolder}/build/faster_lio",
   ],
@@ -24,7 +25,7 @@
   "python.linting.pylintArgs": ["--extension-pkg-whitelist=pyopenvdb"],
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "~/.local/bin/black",
-  "coc.preferences.formatOnSaveFiletypes": ["lua"],
+  "coc.preferences.formatOnSaveFiletypes": ["lua","cpp"],
   "explorer.root.strategies": ["workspace","cwd", "reveal", "sourceBuffer"],
   "explorer.buffer.root.template": "[icon & 1] OPEN EDITORS",
   "explorer.file.root.template": "[icon & 1] PROJECT ([root])",
@@ -53,6 +54,6 @@
     "default": true,
     "line_length": false
   },
-  "clangd.path": "/usr/bin/clangd-10"
-  //"clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.6/clangd_15.0.6/bin/clangd"
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/16.0.2/clangd_16.0.2/bin/clangd"
+  // "clangd.path": "/usr/bin/clangd"
 }

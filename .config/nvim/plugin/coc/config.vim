@@ -46,7 +46,6 @@ endfunction
 
 
 " Keystrokes mappings
-nmap <silent><M-o> :CocCommand clangd.switchSourceHeader<cr>
 nmap <silent>gd <Plug>(coc-definition)
 nmap <silent>gy <Plug>(coc-type-definition)
 nmap <silent>gi <Plug>(coc-implementation)
@@ -57,5 +56,6 @@ nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>qf <Plug>(coc-fix-current)
 
 
-nmap <silent> gs :call CocAction('jumpDefinition', 'vsplit')<CR>
+nmap <silent> gs  :CocCommand clangd.switchSourceHeader<cr>
+nmap <silent> gv :call CocAction('jumpDefinition', 'vsplit')<CR>
 nmap <silent> gt :call CocAction('jumpDefinition', 'tabe')<CR>

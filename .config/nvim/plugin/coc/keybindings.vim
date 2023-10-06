@@ -6,3 +6,4 @@
 " https://github.com/neoclide/coc.nvim/issues/1025
 set tagfunc=CocTagFunc
 nmap <silent>gd <C-]>
+nnoremap <C-q> :CocRestart<cr>
