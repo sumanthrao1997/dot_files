@@ -23,7 +23,7 @@ function keybindings.apply_to_config(config)
     },
     {
       key = 'x',
-      mods = 'LEADER',
+      mods = 'CTRL',
       action = wezterm.action.CloseCurrentPane { confirm = false },
     },
 
@@ -42,6 +42,11 @@ function keybindings.apply_to_config(config)
       key = 'F2',
       mods = 'CTRL|SHIFT',
       action = utils.open_path_in_new_tab(wezterm.config_file)
+    },
+    {
+      key = 'n',
+      mods = 'CTRL',
+      action = act.SpawnTab 'CurrentPaneDomain',
     },
     {
       -- to open vim config in new tab
