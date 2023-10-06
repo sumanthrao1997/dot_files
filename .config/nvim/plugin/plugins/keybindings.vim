@@ -16,13 +16,13 @@ xmap <silent>gc <Plug>NERDCommenterToggle<cr>
 " => Telescope
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>ff      <cmd>Telescope find_files<cr>
+nnoremap <leader>fr      <cmd>Telescope resume<cr>
 nnoremap <leader>fs      <cmd>Telescope live_grep<cr>
 nnoremap <leader>fh      <cmd>Telescope help_tags<cr>
 nnoremap <leader>f*      <cmd>Telescope grep_string<cr>
 nnoremap <leader>f8      <cmd>Telescope grep_string<cr>
-nnoremap <leader>fr      <cmd>Telescope search_history<cr>
+" nnoremap <leader>fr      <cmd>Telescope search_history<cr>
 nnoremap <leader>fg      <cmd>Telescope git_commits<cr>
-"nnoremap <silent><leader>Ag <cmd>Telescope live_grep<cr>
  
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => BufferLine
@@ -39,4 +39,4 @@ nnoremap <silent>Z :ZenMode<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Neoformat
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent>F :Neoformat<CR>
+nnoremap <leader>F :Neoformat<CR>
