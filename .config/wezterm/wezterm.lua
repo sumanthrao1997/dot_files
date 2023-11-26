@@ -1,3 +1,5 @@
+local font_size = 18.0
+-- local font_size = 24.0
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
 
@@ -9,8 +11,7 @@ local tab_bar = require 'tab_bar'
 local config = wezterm.config_builder()
 
 --font size
--- config.font_size = 16.0
-config.font_size = 24.0
+config.font_size = font_size
 
 -- check_for_updates
 config.check_for_updates = true
@@ -34,7 +35,7 @@ config.scrollback_lines = 10000
 config.audible_bell = "Disabled"
 
 -- selecting descrete gpu for my situation.
--- can grt the available gpus by using wezterm.gui.enumerate_gpus()
+-- can get the available gpus by using wezterm.gui.enumerate_gpus()
 for _, gpu in ipairs(wezterm.gui.enumerate_gpus()) do
   if gpu.backend == 'Vulkan' and gpu.device_type == 'DiscreteGpu' then
     config.webgpu_preferred_adapter = gpu
