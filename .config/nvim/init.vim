@@ -9,7 +9,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'lervag/vimtex'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
 Plug 'preservim/nerdcommenter'
 Plug 'rhysd/committia.vim'
 Plug 'sbdchd/neoformat'
