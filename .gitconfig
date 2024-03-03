@@ -39,3 +39,6 @@
   syntax-theme = OneHalfDark
   whitespace-error-style = reverse red
   zero-style = dim syntax
+[credential "https://git.overleaf.com"]
+	username = sumanthrao1997@gmail.com
+	helper = cache

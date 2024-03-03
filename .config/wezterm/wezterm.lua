@@ -1,5 +1,5 @@
-local font_size = 18.0
--- local font_size = 24.0
+local font_size = 13.0
+-- local font_size = 16.0
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
 
@@ -14,7 +14,7 @@ local config = wezterm.config_builder()
 config.font_size = font_size
 
 -- check_for_updates
-config.check_for_updates = true
+config.check_for_updates = false
 config.check_for_updates_interval_seconds = 86400
 
 -- Leader key is similar to tmux

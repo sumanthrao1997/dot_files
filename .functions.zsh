@@ -95,3 +95,8 @@ png_to_pdf () {
     FILENAME=${BASENAME%.*}
     convert $IMAGE ${FILENAME}.pdf
 }
+eval_grep(){ { echo "#rot:"; evo_rpe tum $1 $2 -r rot_part; \
+  echo "trans:"; evo_rpe tum $1 $2  -r trans_part; \
+  echo "d2:"; evo_rpe tum $1 $2 -d 2; \
+  echo "d5:"; evo_rpe tum $1 $2 -d 5; \
+  echo "d10:"; evo_rpe tum $1 $2 -d 10; } 2>&1 | grep 'rmse'; }
