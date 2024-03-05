@@ -95,6 +95,10 @@ png_to_pdf () {
     FILENAME=${BASENAME%.*}
     convert $IMAGE ${FILENAME}.pdf
 }
+taked () {
+        git clone --depth 1 "$1"
+        cd "$(basename ${1%%.git})"
+}
 eval_grep(){ { echo "#rot:"; evo_rpe tum $1 $2 -r rot_part; \
   echo "trans:"; evo_rpe tum $1 $2  -r trans_part; \
   echo "d2:"; evo_rpe tum $1 $2 -d 2; \
