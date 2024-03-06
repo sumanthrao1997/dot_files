@@ -17,7 +17,6 @@ alias git_pull_all='find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {
 alias git_stash_all='find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} stash \;'
 alias git_status_all='find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} status \;'
 alias gp='git push'
-alias merge_compile_commands='sh ~/scripts/merge_compile_commands'
 alias py='ipython3'
 alias rf='rm -rf'
 alias rg='ranger'
