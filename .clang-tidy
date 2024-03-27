@@ -6,11 +6,15 @@ Checks: '*,
 -abseil-*,
 -modernize-use-trailing-return-type,
 -llvm-*,
+-llvmlibc-*,
 -cppcoreguidelines-pro-type-vararg,
 -hicpp-vararg,
 -misc-non-private-member-variables-in-classes,
 -cppcoreguidelines-pro-bounds-pointer-arithmetic,
 -cppcoreguidelines-avoid-magic-numbers,
 -readability-magic-numbers,
-'
+-readability-identifier-length,
+-bugprone-easily-swappable-parameters'
+
+Remove: 
 HeaderFilterRegex: '.*'
