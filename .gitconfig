@@ -42,3 +42,5 @@
 [credential "https://git.overleaf.com"]
 	username = sumanthrao1997@gmail.com
 	helper = cache
+[init]
+	templateDir = /home/sumanth/.git-template
