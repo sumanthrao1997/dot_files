@@ -1,0 +1,7 @@
+black
+ipdb
+isort
+ipython
+pre-commit
+open3d
+numpy
