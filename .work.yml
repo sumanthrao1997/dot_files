@@ -1,0 +1,15 @@
+# ./.tmuxinator.yml
+name: <%= @args[0] %>
+startup_window: editor
+windows:
+  - editor:
+      layout: even-horizontal
+      panes:
+        - nvim . +E
+        - 
+  - run_baby_run:
+      panes:
+        - evrelease 
+        - evrelease 
+        - evrelease 
+        - evrelease 
