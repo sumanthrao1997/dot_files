@@ -26,7 +26,16 @@ install_ohmyzsh() {
     ${ZSH_CUSTOM}/plugins/zsh-autosuggestions 2>/dev/null || true
 }
 
+install_wexterm(){
+  curl -LO https://github.com/wez/wezterm/releases/download/20240203-110809-5046fc22/wezterm-20240203-110809-5046fc22.Ubuntu22.04.deb
+  sudo apt install -y ./wezterm-20240203-110809-5046fc22.Ubuntu22.04.deb 
+  rm ./wezterm-20240203-110809-5046fc22.Ubuntu22.04.deb
+}
+
 install_neovim_extensions() {
+  wget https://github.com/neovim/neovim/releases/download/v0.8.3/nvim-linux64.deb
+  sudo apt install ./nvim-linux64.deb
+  rm ./nvim-linux64.deb
   # Install vim-plug packages
   nvim --noplugin --headless +PlugInstall +qall
 
@@ -45,40 +54,10 @@ install_pip_packages() {
   python3 -m pip install --upgrade -r $HOME/.config/yadm/pip_packages
 }
 
-replace_pkg_version() {
-  PKG="$1"
-  DEFAULT_VERSION="$2"
-  REQUIRED_VERSION="$3"
-
-  if [ "$PKG" = "python" ]; then
-    INSTALLED_VERSION="$(${PKG}3 --version)"
-  else
-    INSTALLED_VERSION="$(${PKG} --version)"
-  fi
-
-  # Quick runnaway in case stuff is already propperly linked
-  if echo $INSTALLED_VERSION | grep $REQUIRED_VERSION >/dev/null; then
-    return
-  fi
-
-  # Fast check
-  # First check if the default brew version is installed and unlink it
-  if $(brew list --versions ${PKG}@${DEFAULT_VERSION} >/dev/null); then
-    brew uninstall --ignore-dependencies ${PKG}@${DEFAULT_VERSION}
-    brew install ${PKG}@${REQUIRED_VERSION}
-  fi
-
-  # Then check if the supported version is installed and force link it
-  if $(brew list --versions ${PKG}@${REQUIRED_VERSION} >/dev/null); then
-    brew link --force ${PKG}@${REQUIRED_VERSION}
-  fi
-  # If non are installed then, skip everything
-}
-
 install_apt_packages() {
   #TODO change
   #add clang tools to apt
-  xargs sudo apt-get -y install <$HOME/.config/yadm/brew_packages
+  xargs sudo apt-get -y install <$HOME/.config/yadm/apt_packages
   # replace_pkg_version python 3.11 3.10
   # replace_pkg_version ruby 3.2 3.0
 }
