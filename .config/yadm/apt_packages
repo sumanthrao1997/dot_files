@@ -5,6 +5,7 @@ curl
 fzf
 htop
 make
+npm
 ripgrep
 rsync
 silversearcher-ag

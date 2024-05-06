@@ -6,7 +6,6 @@ install_apt_packages
 install_pip_packages
 install_ohmyzsh
 install_neovim_extensions
-install_wezterm
 
 
 DECRYPT=${DECRYPT:-no}
