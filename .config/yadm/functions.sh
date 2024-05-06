@@ -8,6 +8,7 @@ install_ohmyzsh() {
   export CHSH=no
   export KEEP_ZSHRC=yes
   export RUNZSH=no
+  
   export OHMYZSH_URL=https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
   export ZSH_CUSTOM=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}
 
@@ -26,7 +27,7 @@ install_ohmyzsh() {
     ${ZSH_CUSTOM}/plugins/zsh-autosuggestions 2>/dev/null || true
 }
 
-install_wexterm(){
+install_wezterm(){
   curl -LO https://github.com/wez/wezterm/releases/download/20240203-110809-5046fc22/wezterm-20240203-110809-5046fc22.Ubuntu22.04.deb
   sudo apt install -y ./wezterm-20240203-110809-5046fc22.Ubuntu22.04.deb 
   rm ./wezterm-20240203-110809-5046fc22.Ubuntu22.04.deb
@@ -34,8 +35,7 @@ install_wexterm(){
 
 install_neovim_extensions() {
   wget https://github.com/neovim/neovim/releases/download/v0.8.3/nvim-linux64.deb
-  sudo apt install ./nvim-linux64.deb
-  rm ./nvim-linux64.deb
+  sudo snap install neovim --classic
   # Install vim-plug packages
   nvim --noplugin --headless +PlugInstall +qall
 
