@@ -1,4 +1,5 @@
 ccache
+cmake
 clang-format
 cloc
 curl

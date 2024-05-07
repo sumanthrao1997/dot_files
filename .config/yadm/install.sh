@@ -16,7 +16,7 @@ main() {
 
   sudo apt install yadm -y
   yadm clone --bootstrap https://github.com/sumanthrao1997/dot_files.git 2>/dev/null || yadm bootstrap
-  yadm remote set-url origin "git@github.com:sumanthrao1997/dot_files.git"
+  #yadm remote set-url origin "git@github.com:sumanthrao1997/dot_files.git"
 }
 
 main "$@"

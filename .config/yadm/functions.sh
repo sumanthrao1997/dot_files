@@ -32,7 +32,7 @@ install_neovim_extensions() {
   #sudo add-apt-repository ppa:neovim-ppa/stable -y && apt-get update -y && apt-get install neovim -y
   curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
   sudo apt-get install -y nodejs
-  git clone  --single-branch --branch stable  https://github.com/neovim/neovim.git ~/neovim && cd ~/neovim && git checkout stable && make CMAKE_BUILD_TYPE=RelWithDebInfo -j10 && sudo make install && cd -
+  git clone --single-branch --branch stable https://github.com/neovim/neovim.git ~/neovim && cd ~/neovim && git checkout stable && make CMAKE_BUILD_TYPE=RelWithDebInfo -j10 && sudo make install && cd -
   # Install vim-plug packages
   nvim --noplugin --headless +PlugInstall +qall
 
