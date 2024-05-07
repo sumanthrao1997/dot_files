@@ -9,6 +9,7 @@ npm
 ripgrep
 rsync
 silversearcher-ag
+software-properties-common
 python3-pip
 tmux
 tmuxinator
@@ -17,3 +18,4 @@ wget
 xclip
 xsel
 zsh
+

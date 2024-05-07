@@ -29,7 +29,10 @@ install_ohmyzsh() {
 
 install_neovim_extensions() {
   #wget https://github.com/neovim/neovim/releases/download/v0.8.3/nvim-linux64.deb
-  sudo snap install nvim --classic
+  sudo add-apt-repository ppa:neovim-ppa/stable
+  sudo apt-get update
+  sudo apt-get install neovim
+  # sudo snap install nvim --classic
   # Install vim-plug packages
   nvim --noplugin --headless +PlugInstall +qall
 
