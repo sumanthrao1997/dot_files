@@ -28,10 +28,11 @@ install_ohmyzsh() {
 
 
 install_neovim_extensions() {
-  sudo npm cache clean -f && npm install -g n &&  n stable && npm install npm@latest	
-  #wget https://github.com/neovim/neovim/releases/download/v0.8.3/nvim-linux64.deb
-  sudo add-apt-repository ppa:neovim-ppa/stable -y && apt-get update -y && apt-get install neovim -y
-  # sudo snap install nvim --classic
+  #sudo npm cache clean -f && npm install -g n &&  n stable && npm install npm@latest	
+  #sudo add-apt-repository ppa:neovim-ppa/stable -y && apt-get update -y && apt-get install neovim -y
+  curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+  sudo snap install nvim --classic
   # Install vim-plug packages
   nvim --noplugin --headless +PlugInstall +qall
 

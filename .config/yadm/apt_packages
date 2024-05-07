@@ -10,6 +10,7 @@ ripgrep
 rsync
 silversearcher-ag
 software-properties-common
+snapd
 python3-pip
 tmux
 tmuxinator
