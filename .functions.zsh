@@ -76,6 +76,17 @@ compile_commands() {
     printf '\n]\n' >> compile_commands.json
 }
 
+catkin_source(){
+    local ws_path=$(catkin locate | sed 's/$/\/devel\/setup.zsh/' 2>/dev/null)
+    # Check if the file exists before sourcing
+    if [[ -f "$ws_path" ]]; then
+        source "$ws_path"
+        echo "Sourced file: $ws_path"
+    else
+        echo "Error: File '$ws_path' does not exist so not sourced."
+    fi
+}
+
 mpc(){
 	mkdir -p -- "$1" &&
 	cd -P -- "$1"
