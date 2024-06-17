@@ -7,6 +7,8 @@ ZSH_TMUX_AUTOCONNECT="false"
 ZSH_TMUX_AUTOQUIT="true"
 ZSH_TMUX_AUTOSTART="false"
 
+export LANG="en_GB.UTF-8"
+export LC_ALL="en_GB.UTF-8"
 export ZSH="$HOME/.oh-my-zsh"
 #ZSH_THEME="robbyrussell"
 # ZSH_THEME="arrow"
