@@ -7,6 +7,7 @@ curl
 fonts-powerline
 fzf
 gettext
+git
 htop
 make
 python3-pip
