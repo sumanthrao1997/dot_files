@@ -15,10 +15,10 @@ install_ohmyzsh() {
   ZSH= sh -c "$(curl -fsSL $OHMYZSH_URL/tools/install.sh)" >/dev/null || zsh -i -c "omz update"
 
   # If user shell is not zsh, change it (password required)
-  # if [ ! "$(basename "$SHELL")" = "zsh" ]; then
-    # RUN=$(command_exists sudo && echo "sudo" || echo "command")
-  $RUN chsh -s "$(which zsh)" "$USER" 2>/dev/null || chsh -s "$(which zsh)"
-  # fi
+  if [ ! "$(basename "$SHELL")" = "zsh" ]; then
+    RUN=$(command_exists sudo && echo "sudo" || echo "command")
+    $RUN chsh -s "$(which zsh)" "$USER" 2>/dev/null || chsh -s "$(which zsh)"
+  fi
 
   # Install zsh-autosuggestions custom plugin
   git clone --depth 1 \
