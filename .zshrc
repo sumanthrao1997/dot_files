@@ -10,7 +10,7 @@ ZSH_TMUX_AUTOSTART="false"
 export ZSH="$HOME/.oh-my-zsh"
 #ZSH_THEME="robbyrussell"
 # ZSH_THEME="arrow"
-export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border=rounded'
+export FZF_DEFAULT_OPTS='--height 60% --layout=reverse'
 plugins=(git
         fzf
         z
