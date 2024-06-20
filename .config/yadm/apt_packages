@@ -2,7 +2,6 @@ bat
 ccache
 clang-format
 cloc
-cmake
 curl
 fonts-powerline
 fzf
