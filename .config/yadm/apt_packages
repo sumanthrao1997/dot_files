@@ -3,6 +3,7 @@ ccache
 clang-format
 cloc
 curl
+flameshot
 fonts-powerline
 fzf
 gettext
