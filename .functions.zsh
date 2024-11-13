@@ -110,6 +110,21 @@ taked () {
         git clone --depth 1 "$1"
         cd "$(basename ${1%%.git})"
 }
+
+continous_rsync(){
+    while [ 1 ]
+    do
+        rsync -avz  --timeout=60 --partial "$1" "$2"
+        if [ "$?" = "0" ] ; then
+            echo "rsync completed normally"
+            exit
+        else
+            echo "Rsync failure. Backing off and retrying..."
+            sleep 180
+        fi
+    done
+}
+
 eval_grep(){ { echo "#rot:"; evo_rpe tum $1 $2 -r rot_part; \
   echo "trans:"; evo_rpe tum $1 $2  -r trans_part; \
   echo "d2:"; evo_rpe tum $1 $2 -d 2; \
