@@ -11,6 +11,7 @@ git
 htop
 language-pack-en
 make
+open3d-gui
 python3-pip
 ripgrep
 rsync
