@@ -79,3 +79,8 @@ nnoremap * *zz
 nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Fzf files
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <silent> <Leader>ff :Files<CR>

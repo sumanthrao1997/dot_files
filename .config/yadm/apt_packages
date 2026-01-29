@@ -2,12 +2,15 @@ bat
 ccache
 clang-format
 cloc
-cmake
 curl
+flameshot
 fonts-powerline
 fzf
+gdb
 gettext
+git
 htop
+language-pack-en
 make
 python3-pip
 ripgrep
@@ -23,4 +26,5 @@ unzip
 wget
 xclip
 xsel
+zathura
 zsh

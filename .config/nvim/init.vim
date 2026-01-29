@@ -3,6 +3,7 @@ Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 Plug 'antoinemadec/coc-fzf'
 Plug 'arzg/vim-colors-xcode'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'jjshoots/betterf.nvim'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'kyazdani42/nvim-web-devicons'

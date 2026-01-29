@@ -26,10 +26,11 @@ tab_bar.apply_to_config(config)
 
 -- color scheme
 config.color_scheme = "Abernathy_black"
-config.window_decorations = "RESIZE"
+config.window_decorations = "NONE"
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_max_width = 30
 config.scrollback_lines = 10000
+config.warn_about_missing_glyphs = false
 
 -- bell
 config.audible_bell = "Disabled"
