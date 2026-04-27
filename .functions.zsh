@@ -10,6 +10,18 @@ open_remote() {
     xdg-open $(git remote -vv | grep origin | tail -n1 | awk '{print $2}' | xargs -I URL sh -c "echo URL | grep https || echo URL | sed 's/:/\//' | sed 's/^.*@/https:\/\//'") 1> /dev/null
 }
 
+open_pr() {
+    local pr_url
+    pr_url=$(gh pr view --json url -q .url 2>/dev/null)
+    if [[ -n "$pr_url" ]]; then
+        xdg-open "$pr_url" 1>/dev/null
+    else
+        local repo_url
+        repo_url=$(git remote -vv | grep origin | tail -n1 | awk '{print $2}' | xargs -I URL sh -c "echo URL | grep https || echo URL | sed 's/:/\//' | sed 's/^.*@/https:\/\//'")
+        xdg-open "${repo_url}/pulls" 1>/dev/null
+    fi
+}
+
 grab() {
     realpath "$1" | tr -d "\n" | xclip -selection clipboard
 }
@@ -123,6 +135,16 @@ continous_rsync(){
             sleep 180
         fi
     done
+}
+
+swap() {
+    if [[ $# -ne 2 ]]; then
+        echo "Usage: swap <file1> <file2>"
+        return 1
+    fi
+    local tmp
+    tmp=$(mktemp "$(dirname "$1")/swap_tmp_XXXXXX")
+    mv "$1" "$tmp" && mv "$2" "$1" && mv "$tmp" "$2"
 }
 
 eval_grep(){ { echo "#rot:"; evo_rpe tum $1 $2 -r rot_part; \
