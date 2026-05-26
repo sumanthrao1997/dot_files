@@ -5,7 +5,6 @@
 [core]
 	editor = nvim
 	pager = less
-	hooksPath = ~/.git_hooks
 
 [merge]
 	tool = meld
