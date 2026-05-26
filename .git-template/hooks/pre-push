@@ -4,8 +4,7 @@ PROTECTED="^(main|master|release_nix|release)$"
 while read local_ref local_sha remote_ref remote_sha; do
   branch="${remote_ref##refs/heads/}"
   if [[ "$branch" =~ $PROTECTED ]]; then
-    exec < /dev/tty
-    read -p "warning: pushing directly to '$branch'. Are you sure? [y/N] " answer
+    read -p "warning: pushing directly to '$branch'. Are you sure? [y/N] " answer < /dev/tty
     if [[ ! "$answer" =~ ^[Yy]$ ]]; then
       echo "push aborted."
       exit 1
