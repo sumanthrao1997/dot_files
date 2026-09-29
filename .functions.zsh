@@ -152,3 +152,39 @@ eval_grep(){ { echo "#rot:"; evo_rpe tum $1 $2 -r rot_part; \
   echo "d2:"; evo_rpe tum $1 $2 -d 2; \
   echo "d5:"; evo_rpe tum $1 $2 -d 5; \
   echo "d10:"; evo_rpe tum $1 $2 -d 10; } 2>&1 | grep 'rmse'; }
+
+
+# Diff files against a ref (default: origin/main)
+# Usage: gdf [ref] <file> [file...]
+gdf() {
+    local ref=origin/main
+    # Treat the first arg as a ref only if it's a valid rev and not an existing path
+    if [[ $# -gt 1 && ! -e $1 ]] && git rev-parse -q --verify "$1^{commit}" >/dev/null; then
+        ref=$1; shift
+    fi
+    if [[ $# -eq 0 ]]; then
+        echo "usage: gdf [ref] <file> [file...]" >&2
+        return 1
+    fi
+    # Refresh the remote-tracking ref when comparing against a remote branch
+    [[ $ref == origin/* ]] && git fetch -q origin "${ref#origin/}"
+    git diff "$ref" -- "$@"
+}
+
+_gdf() {
+    local ref=origin/main
+    if (( CURRENT > 2 )) && [[ ! -e ${words[2]} ]] && git rev-parse -q --verify "${words[2]}^{commit}" >/dev/null 2>&1; then
+        ref=${words[2]}
+    fi
+    local -a files refs
+    files=(${(f)"$(git diff --name-only --relative "$ref" 2>/dev/null)"})
+    if (( CURRENT == 2 )); then
+        # First arg can be a ref or a file
+        refs=(${(f)"$(git for-each-ref --format='%(refname:short)' refs/heads refs/remotes refs/tags 2>/dev/null)"})
+        _describe -t files 'changed files' files
+        _describe -t refs 'refs' refs
+    else
+        _describe 'changed files' files
+    fi
+}
+compdef _gdf gdf
